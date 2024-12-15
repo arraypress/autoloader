@@ -14,17 +14,17 @@ composer require arraypress/autoloader
 In your WordPress plugin, after requiring the Composer autoload file:
 
 ```php
-use ArrayPress\AutoloaderManager;
+use ArrayPress\Utils\Autoloader;
 
 // Register your libraries
-AutoloaderManager::register(
+Autoloader::register(
     'ArrayPress\\Geocoding\\', 
     '1.0.0',
     __DIR__ . '/vendor/arraypress/geocoding/src/'
 );
 
 // You can register multiple libraries
-AutoloaderManager::register(
+Autoloader::register(
     'ArrayPress\\Utils\\',
     '2.1.0',
     __DIR__ . '/vendor/arraypress/utils/src/'
@@ -48,25 +48,25 @@ multiple plugins use different versions of the same library.
 ### Register a Library
 
 ```php
-AutoloaderManager::register( string $namespace, string $version, string $baseDir ): void
+Autoloader::register( string $namespace, string $version, string $baseDir ): void
 ```
 
 ### Check Registration Status
 
 ```php
-AutoloaderManager::is_registered( string $namespace ): bool
+Autoloader::is_registered( string $namespace ): bool
 ```
 
 ### Get Library Version
 
 ```php
-AutoloaderManager::get_version( string $namespace ): ?string
+Autoloader::get_version( string $namespace ): ?string
 ```
 
 ### Get All Registered Libraries
 
 ```php
-AutoloaderManager::get_registered(): array
+Autoloader::get_registered(): array
 ```
 
 ## Directory Structure

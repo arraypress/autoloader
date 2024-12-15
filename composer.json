@@ -1,5 +1,6 @@
 {
   "name": "arraypress/autoloader",
+  "version": "1.0.0",
   "description": "A version-aware autoloader manager for ArrayPress libraries",
   "type": "library",
   "license": "GPL-2.0-or-later",
@@ -15,15 +16,14 @@
   },
   "autoload": {
     "psr-4": {
-      "ArrayPress\\": "src/"
+      "ArrayPress\\Utils\\": "src/"
     }
   },
   "config": {
     "optimize-autoloader": true,
     "sort-packages": true
   },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
+  "minimum-stability": "stable",
   "support": {
     "issues": "https://github.com/arraypress/autoloader/issues",
     "source": "https://github.com/arraypress/autoloader"

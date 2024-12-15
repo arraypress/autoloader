@@ -11,14 +11,14 @@
 
 declare( strict_types=1 );
 
-namespace ArrayPress;
+namespace ArrayPress\Utils;
 
 /**
- * Class AutoloaderManager
+ * Class Autoloader
  *
  * Manages versioned autoloading for multiple ArrayPress libraries
  */
-final class AutoloaderManager {
+final class Autoloader {
 
 	/**
 	 * Registered namespaces and their versions
